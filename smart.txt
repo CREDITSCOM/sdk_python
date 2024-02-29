@@ -1,0 +1,27 @@
+import com.credits.scapi.annotations.*;
+import com.credits.scapi.v0.*;
+
+public class Contract extends SmartContract{
+
+    public Contract() {
+   
+    }
+
+    private int val = 0;
+
+    public int inc() {
+        ++val;
+        return val;
+    }
+    
+    public int dec() {
+        if(val > 0) {
+            --val;
+            return val;
+        }
+        else {
+        
+            return 0;
+        }
+    }
+}
